@@ -1,10 +1,12 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import { Theme } from '@radix-ui/themes'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/home.tsx'
 import Flashcards from './pages/flashcards.tsx'
+import Note from './pages/note.tsx'
+import Todo from './pages/todolist.tsx'
+import Clock from './pages/clock.tsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,18 @@ const router = createBrowserRouter([
       {
         path: "/flashcards",
         element: <Flashcards />
+      },
+      {
+        path: "/note",
+        element: <Note />
+      },
+      {
+        path: "/todo",
+        element: <Todo />
+      },
+      {
+        path: "/clock",
+        element: <Clock />
       }
     ]
   }
@@ -25,8 +39,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <Theme accentColor="gray" appearance="light" grayColor="slate">
       <RouterProvider router={router} />
-    </Theme>
   </React.StrictMode>,
 )

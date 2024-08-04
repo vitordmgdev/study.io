@@ -1,13 +1,12 @@
 import { Flex, Heading, Link } from "@radix-ui/themes";
 import styled from "styled-components";
 import '../App.css'
-import HomeCarousel from "@/components/carousel-home/carousel-home";
 
 const Home = () => {
     return(
         <Section>
             <Heading weight="bold" className="font-inter" size="7" color="indigo">
-                Bem-vindo ao study.io! VITOR.
+                Bem-vindo ao study.io
             </Heading>
             <Flex direction="column" gap="4">
                 <Flex align="center" gap="3">
@@ -17,10 +16,10 @@ const Home = () => {
                     <Link weight="regular" 
                     size="2" 
                     href="/flashcards">
-                        Ver coleção
+                        Todas as coleções
                     </Link>
                 </Flex>
-                <HomeCarousel />
+
             </Flex>
         </Section>
     )
